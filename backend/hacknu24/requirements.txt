@@ -4,3 +4,5 @@ django-filter==23.5
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.3.0
 phonenumbers==8.13.34
+requests==2.31.0
+beautifulsoup4==4.12.3
