@@ -11,6 +11,7 @@ class UserAuthSerializer(serializers.Serializer):
 
     phone_number = serializers.CharField()
     name = serializers.CharField(read_only = True)
+    
     class Meta:
         fields = ('phone_number', 'name')
         read_only_fields = ('name', )
@@ -30,7 +31,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'name', 'phone_number', 'is_active', 'is_staff')
+        fields = '__all__'
 
     def validate(self, data):
         print(data)
