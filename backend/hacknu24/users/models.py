@@ -76,3 +76,6 @@ class UserSMS(models.Model):
 
     def is_expired(self):
         return now() > self.expiry_at
+    
+    def __str__(self) -> str:
+        return self.user.phone_number + " - " + self.code
